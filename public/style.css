@@ -1,0 +1,49 @@
+.wrapper {
+    width: 100%;
+}
+
+/* Header */
+header,
+.menu,
+.slider {
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right,#f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
+}
+
+.menu {
+    height: 50px;
+    background: #2f3c43;
+}
+
+
+.slider-image {
+    width: 100%;
+}
+
+/* Content */
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background: #2f3c43;
+}
+
+footer .line {
+    align-self: flex-end;
+}
+
+@keyframes slider {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
