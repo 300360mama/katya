@@ -1,0 +1,20 @@
+@font-face{
+	font-family: Lobster;
+	src: url("/fonts/Lobster-Regular.ttf") format("ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: Roboto;
+	src: url("/fonts/Roboto-Regular.ttf") format("ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: Lato;
+	src: url("/fonts/Lato-Regular.ttf") format("ttf");
+	font-weight: normal;
+	font-style: normal;
+}

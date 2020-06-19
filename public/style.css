@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
     width: 100%;
 }
@@ -12,7 +17,16 @@ header,
 .line {
     width: 100%;
     height: 5px;
-    background: linear-gradient(to right,#f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
+    background: linear-gradient(
+        to right,
+        #f9060c,
+        #f98e1b,
+        #f9f61b,
+        #1bf930,
+        #1bd7f9,
+        #301bf9,
+        #f91be2
+    );
 }
 
 .menu {
@@ -20,12 +34,108 @@ header,
     background: #2f3c43;
 }
 
-
 .slider-image {
     width: 100%;
 }
 
 /* Content */
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.model {
+    width: 100%;
+}
+
+.scheme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+.arrow-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.arrow-wrapper .arrow {
+    width: 55px;
+    height: 150px;
+}
+
+.line-delimiter {
+    width: 100%;
+    height: 60px;
+    background: #e76da9;
+}
+
+.conception {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-block {
+    min-width: 320px;
+    max-width: 960px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.nav-block .block-wrapper {
+    width: 30%;
+    border-radius: 5px;
+    background: #c9df11;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px #000000;
+    padding: 10px 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.block-wrapper .circle {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 34px;
+    text-shadow: #000000;
+    
+}
+
+.block-wrapper .link-text {
+    text-align: center;
+    font: 20px Lato;
+}
+
+
 
 /* Footer */
 footer {
