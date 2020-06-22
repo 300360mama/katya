@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style/fonts.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/style/fontawesome/all.min.css">
-    <link rel="stylesheet" href="/style/fonts.css">
 </head>
 <body>
     <div class="wrapper">
@@ -15,14 +15,14 @@
             <nav class="menu"></nav>
             <section class="slider">
                 <img id="sliderImage1" class="slider-image" src="/images/slider-img1.png" alt="kid">
-                {{-- <img id="sliderImage2" class="slider-image" src="/images/slider-img2.png" alt="kid">
+                <img id="sliderImage2" class="slider-image" src="/images/slider-img2.png" alt="kid">
                 <img id="sliderImage3" class="slider-image" src="/images/slider-img3.png" alt="kid">
-                <img id="sliderImage4" class="slider-image" src="/images/slider-img4.png" alt="kid"> --}}
+                <img id="sliderImage4" class="slider-image" src="/images/slider-img4.png" alt="kid">
             </section>
         </header>
         <div class="content">
             <section class="model content-block">
-                <h1 class="title"><b>Модель діяльності «GoogLiKiI»</b></h1>
+                <h1 class="title"><b>Модель діяльності <span>«GoogLiKiI»</spa></b></h1>
                 <section class="scheme">
                     <div class="cycle-block">
                         <span class="note">ХОЧУ</span>
@@ -47,7 +47,7 @@
                     </div>
                      
                     <span class="description">
-                        Перехід від розуміння дитиною поняття ТРЕБА до змісту  НАВІЩО ЦЕ МЕНІ ПОТРІБНО.
+                        Перехід від розуміння дитиною поняття <br><span>ТРЕБА</span> до змісту  <span>НАВІЩО ЦЕ МЕНІ ПОТРІБНО</spa>.
                     </span>
                 </section>
             </section>
@@ -60,11 +60,11 @@
                 <div class="nav-block">
                     <a href="" class="block-wrapper">
                         <i class="fas fa-globe-americas circle"></i>
-                        <span class="link-text"> ДІЯЛЬНІСНИЙ ПІДХІД В РІХНИХ ВИДАХ АКТИВНОСТЕЙ ДИТИНИ(здобування ЗУН в активній пошуковій діяльності)</span>
+                        <span class="link-text"> ДІЯЛЬНІСНИЙ ПІДХІД В РІХНИХ ВИДАХ АКТИВНОСТЕЙ ДИТИНИ <br>(здобування ЗУН в активній пошуковій діяльності)</span>
                     </a>
                     <a href="" class="block-wrapper">
                         <i class="fab fa-searchengin circle"></i>
-                        <span class="link-text">ДІЯЛЬНІСНИЙ ПІДХІД В РІХНИХ ВИДАХ АКТИВНОСТЕЙ ДИТИНИ(здобування ЗУН в активній пошуковій діяльності)</span>      
+                        <span class="link-text">ДІЯЛЬНІСНИЙ ПІДХІД В РІХНИХ ВИДАХ АКТИВНОСТЕЙ ДИТИНИ <br>(здобування ЗУН в активній пошуковій діяльності)</span>      
                     </a>
                     <a href="" class="block-wrapper">
                         <i class="fas fa-thumbs-up circle"></i>
