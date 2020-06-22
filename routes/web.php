@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', "HomeController@index");
+Route::get('/article/{number}', "HomeController@getArticle")->name("article");
