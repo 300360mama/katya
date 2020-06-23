@@ -3,7 +3,7 @@
 @section("content")
    <article>
        <h3 class="article-title">ДІЯЛЬНІСНИЙ ПІДХІД В РІХНИХ ВИДАХ АКТИВНОСТЕЙ ДИТИНИ</h3>
-{{$article_number}}
+
        @if ($article_number === 1)
        <section class="article-content">
         Content 1

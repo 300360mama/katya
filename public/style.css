@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    background: url("/images/background.png");
+    background-size: contain;
 }
 
 .wrapper {
@@ -52,21 +54,11 @@ header,
 }
 
 .logo {
-    width: 200px;
-    height: 150px;
+    width: 21.5%;
     z-index: 10;
     position: absolute;
     left: 10%;
     top: 10%;
-}
-
-.slogan {
-    z-index: 10;
-    position: absolute;
-    left: 10%;
-    top: 30%;
-    font: 45px Lobster;
-    color: #fff;
 }
 
 .hide-wrapper {
@@ -126,7 +118,7 @@ header,
 }
 .title {
     font: 36px Lobster;
-    color: #ea7066;
+    color: #541b21;
     text-align: center;
 }
 
@@ -222,7 +214,7 @@ header,
 
 .description {
     font: 30px Roboto;
-    color: #8c6369;
+    color: #541b21;
     text-align: center;
 }
 
@@ -249,7 +241,7 @@ header,
 
 .title-2 {
     font: 25px RobotoMed;
-    color: #57f04b;
+    color: #541b21;
     text-align: center;
 }
 
@@ -325,6 +317,7 @@ header,
 }
 
 .block-wrapper .link-text {
+    width: 100%;
     text-align: center;
     font: 20px Roboto;
     color: #fff;
@@ -429,8 +422,24 @@ article {
 }
 
 @media screen and (max-width: 640px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 26px;
+    }
+
+    .arrow-block .caption {
+        font-size: 18px;
+    }
+
+    .title-2 {
+        font-size: 22px;
+    }
     .nav-block .block-wrapper {
         width: 40%;
+        padding: 45px 5px 10px 5px;
     }
 
     .note {
@@ -440,7 +449,7 @@ article {
 
 @media screen and (max-width: 480px) {
     .block-wrapper .link-text {
-        font-size: 14px;
+        font-size: 12px;
     }
     .note {
         font-size: 20px;

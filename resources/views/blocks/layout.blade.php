@@ -28,7 +28,6 @@
                 <img id="sliderImage2" class="slider-image" src="/images/slider-img2.png" alt="kid">
                 <img id="sliderImage3" class="slider-image" src="/images/slider-img3.png" alt="kid">
                 <img id="sliderImage4" class="slider-image" src="/images/slider-img4.png" alt="kid">
-                <h3 class="slogan">Slogan</h3>
                 <img src="/images/logo.png" alt="logo" class="logo">
             </section>
         </header>

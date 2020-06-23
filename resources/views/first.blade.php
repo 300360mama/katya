@@ -40,7 +40,7 @@
         <div class="nav-block">
             <a href="/article/1" class="block-wrapper">
                 <i class="fas fa-globe-americas circle"></i>
-                <span class="link-text"> ДІЯЛЬНІСНИЙ ПІДХІД В РІХНИХ ВИДАХ АКТИВНОСТЕЙ ДИТИНИ <br>(здобування ЗУН в активній пошуковій діяльності)</span>
+                <span class="link-text">ЦІЛІСНА КАРТИНА СВІТУ <br>(предметне, природне , соціальне довкілля)</span>
             </a>
             <a href="/article/2" class="block-wrapper">
                 <i class="fab fa-searchengin circle"></i>
