@@ -2,7 +2,7 @@
 
 @section("content")
     <section class="model content-block">
-        <h1 class="title"><b>Модель діяльності <span>«GoogLiKiI»</spa></b></h1>
+        <h1 class="title"><b>Модель діяльності <span>«GoogLiKi»</spa></b></h1>
         <section class="scheme">
             <div class="cycle-block">
                 <span class="note">ХОЧУ</span>

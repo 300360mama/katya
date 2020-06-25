@@ -20,16 +20,7 @@ header,
 .line {
     width: 100%;
     height: 5px;
-    background: linear-gradient(
-        to right,
-        #f9060c,
-        #f98e1b,
-        #f9f61b,
-        #1bf930,
-        #1bd7f9,
-        #301bf9,
-        #f91be2
-    );
+    background: linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
 }
 
 .menu {
@@ -286,7 +277,6 @@ header,
     margin-bottom: 10px;
     text-align: center;
     font-size: 34px;
-    text-shadow: #989393;
     top: -20px;
     display: flex;
     justify-content: center;
@@ -361,21 +351,35 @@ footer .line {
 article {
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 10px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .article-title {
-    font: 18px Roboto;
-    color: #8c6369;
+    font: 22px Lobster;
+    color: #541b21;
+    text-align: center;
 }
 
 .article-content {
-    font: 16px Roboto;
+    font: 18px Roboto;
     color: #000000;
     text-align: justify;
+}
+
+.article-content p {
+    text-indent: 15px;
+}
+
+.article-list {
+    font-size: 18px;
+    color: #000b92;
+}
+
+.article-list:nth-of-type(odd) {
+    color: #a53500;
 }
 
 @keyframes fade {
@@ -419,6 +423,15 @@ article {
     .block-wrapper .link-text {
         font-size: 16px;
     }
+
+    .article-title {
+        font-size: 18px;
+    }
+
+    .article-content {
+        font-size: 16px;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
