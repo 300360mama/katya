@@ -1,4 +1,3 @@
-
 .logo {
     display: none;
 }
@@ -17,6 +16,13 @@
     font: 36px Lobster;
     color: #541b21;
     text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    font: 28px Lobster;
+    color: #d42981;
+    margin: 15px 0;
 }
 
 .home_logo {
@@ -41,6 +47,12 @@
     padding: 20px 15px;
 }
 
+.info_title {
+    font: 25px Lobster;
+    color: #d42981;
+    margin: 15px 0;
+}
+
 .info address {
     display: flex;
     flex-direction: column;
@@ -62,4 +74,3 @@
 .info .tel {
     text-decoration: none;
 }
-

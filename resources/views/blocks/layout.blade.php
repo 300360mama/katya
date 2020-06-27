@@ -17,16 +17,8 @@
         <header class="header">
             <div class="line"></div>
             <nav class="menu">
-
                 <a href="/" class="menu-item">Головна</a>
-                <a href="/model" class="menu-item">Модель розвитку</a>
-                {{-- @if ($article_number)
-                    <a href="/" class="goto-home">
-                    <i class="fas fa-arrow-left"></i>
-                    Повернутись на головну
-                </a>
-                @endif --}}
-               
+                <a href="/model" class="menu-item">Модель розвитку</a>      
             </nav>
             <section class="slider">
                 <div class="hide-wrapper"></div>
@@ -45,7 +37,7 @@
                 <span class="follow">Follow us:</span>
                 <a href="https://facebook.com" class="social">
                     <i class="fab fa-facebook-f"></i>
-                   Знайдіть нас в фейсбук
+                   Знайдіть нас в
                 </a>
 
                 <a href="https://www.facebook.com/Googliki/" class="social">
