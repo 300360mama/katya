@@ -6,6 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="/style/fonts.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/article.css">
+    <link rel="stylesheet" href="/style/model.css">
+    <link rel="stylesheet" href="/style/mediaquery.css">
     <link rel="stylesheet" href="/style/fontawesome/all.min.css">
 </head>
 <body>
@@ -14,12 +18,14 @@
             <div class="line"></div>
             <nav class="menu">
 
-                @if ($article_number)
-                     <a href="/" class="goto-home">
+                <a href="/" class="menu-item">Головна</a>
+                <a href="/model" class="menu-item">Модель розвитку</a>
+                {{-- @if ($article_number)
+                    <a href="/" class="goto-home">
                     <i class="fas fa-arrow-left"></i>
                     Повернутись на головну
                 </a>
-                @endif
+                @endif --}}
                
             </nav>
             <section class="slider">
@@ -31,20 +37,20 @@
                 <img src="/images/logo.png" alt="logo" class="logo">
             </section>
         </header>
-        <div class="content">
+        <main class="content">
            @yield('content')
-        </div>
+        </main>
         <footer>
             <section class="social-links">
                 <span class="follow">Follow us:</span>
                 <a href="https://facebook.com" class="social">
                     <i class="fab fa-facebook-f"></i>
-                    Сторінка в facebook
+                   Знайдіть нас в фейсбук
                 </a>
 
-                <a href="https://instagram.com" class="social">
-                    <i class="fab fa-instagram"></i>
-                    Сторінка в instagram
+                <a href="https://www.facebook.com/Googliki/" class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    Наша група
                 </a>
              
             </section>

@@ -1,0 +1,65 @@
+
+.logo {
+    display: none;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 60px 15px 15px 15px;
+}
+
+.home_title {
+    font: 36px Lobster;
+    color: #541b21;
+    text-align: center;
+}
+
+.home_logo {
+    width: 57%;
+    max-width: 960px;
+    max-height: 396px;
+}
+
+.home_list {
+    font: 30px Lobster;
+    color: #541b21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 15px;
+}
+
+.info address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font: 28px Lobster;
+    color: #541b21;
+}
+
+.info .telephones {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font: 24px Roboto;
+    color: #541b21;
+}
+
+.info .tel {
+    text-decoration: none;
+}
+

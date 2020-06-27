@@ -1,0 +1,49 @@
+@media screen and (max-width: 760px) {
+    .block-wrapper .link-text {
+        font-size: 16px;
+    }
+
+    .article-title {
+        font-size: 18px;
+    }
+
+    .article-content {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 26px;
+    }
+
+    .arrow-block .caption {
+        font-size: 18px;
+    }
+
+    .title-2 {
+        font-size: 22px;
+    }
+    .nav-block .block-wrapper {
+        width: 40%;
+        padding: 45px 5px 10px 5px;
+    }
+
+    .note {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .block-wrapper .link-text {
+        font-size: 12px;
+    }
+    .note {
+        font-size: 20px;
+    }
+}

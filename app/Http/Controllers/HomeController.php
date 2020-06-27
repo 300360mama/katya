@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
 
         $article_number =  $request->number ? $request->number : null;
-        return view("first", ["article_number"=>(int) $article_number]);
+        return view("home");
     }
 
     public function getArticle(Request $request)
@@ -18,5 +18,4 @@ class HomeController extends Controller
         $article_number =  $request->number ? $request->number : 1;
         return view("article", ["article_number"=>(int) $article_number]);
     }
-
 }

@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', "HomeController@index");
-Route::get('/article/{number}', "HomeController@getArticle")->name("article");
+Route::get('/model', "ModelController@index")->name("model");
+Route::get('/model/article/{number}', "ModelController@getArticle")->name("model-article");
