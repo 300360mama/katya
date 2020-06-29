@@ -39,6 +39,31 @@
     align-items: center;
 }
 
+.home_article {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    padding: 30px 30px;
+    background: #541b21;
+    font: 23px Roboto;
+    color: #ffffff;
+    line-height: 1.3;
+    box-sizing: border-box;
+}
+
+.home_article p {
+    margin: 7px 0;
+    text-indent: 10px;
+}
+
+.home_article_brand {
+    background: -webkit-linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
+    background: linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-top: 7px;
+}
+
 .info {
     display: flex;
     flex-direction: column;

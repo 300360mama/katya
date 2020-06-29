@@ -11,6 +11,9 @@
         font-size: 16px;
     }
 
+    .home_article {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -45,5 +48,9 @@
     }
     .note {
         font-size: 20px;
+    }
+
+    .home_article {
+        font-size: 18px;
     }
 }
