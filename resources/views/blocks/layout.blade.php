@@ -15,7 +15,7 @@
        <link rel="stylesheet" href="/style/model.css">     
     @endif
 
-    @if (Route::currentRouteName() === "model-article")
+    @if (Route::currentRouteName() === "model-article" || Route::currentRouteName() === "english-model")
        <link rel="stylesheet" href="/style/article.css">     
     @endif
        
@@ -26,7 +26,12 @@
     <div class="wrapper">
         <header class="header">
             <div class="line"></div>
-            <nav class="menu">
+            <nav class="menu close">
+                <div class="nav-buttons">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
                 <a href="/" class="menu-item">Головна</a>
                 <a href="/model" class="menu-item">Модель розвитку</a>      
                 <a href="/english_model" class="menu-item">Поглиблене англомовлення</a>      
@@ -56,6 +61,8 @@
             <div class="line"></div>
         </footer>
     </div> 
+
+    <script src="/js/index.js"></script>
     
 </body>
 </html>

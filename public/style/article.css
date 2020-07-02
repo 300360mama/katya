@@ -9,6 +9,10 @@ article {
     align-items: center;
 }
 
+article .center {
+    text-align: center;
+}
+
 .article-title {
     font: 22px Lobster;
     color: #541b21;
@@ -32,4 +36,12 @@ article {
 
 .article-list:nth-of-type(odd) {
     color: #a53500;
+}
+
+.article-gradient {
+    background: -webkit-linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
+    background: linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-top: 7px;
 }

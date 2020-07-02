@@ -42,7 +42,40 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
+    .menu {
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40vw;
+        height: 100vh;
+        z-index: 13;
+        flex-direction: column;
+        padding-top: 20px;
+        transition: transform 0.3s;
+    }
+
+    .menu.open {
+        transform: translate(0, 0);
+    }
+
+    .menu.close {
+        transform: translate(-100%, 0);
+    }
+
+    .menu .nav-buttons {
+        display: inline-block;
+    }
+
+    .menu-item {
+        font-size: 16px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid #fff;
+    }
+
     .block-wrapper .link-text {
         font-size: 12px;
     }
