@@ -1,4 +1,4 @@
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .block-wrapper .link-text {
         font-size: 16px;
     }
@@ -13,6 +13,10 @@
 
     .home_article {
         font-size: 22px;
+    }
+
+    .block-wrapper .link-text {
+        font-size: 15px;
     }
 }
 
@@ -40,9 +44,7 @@
     .note {
         font-size: 23px;
     }
-}
 
-@media screen and (max-width: 425px) {
     .menu {
         align-items: flex-start;
         justify-content: flex-start;
@@ -75,7 +77,9 @@
         padding-top: 10px;
         border-bottom: 1px solid #fff;
     }
+}
 
+@media screen and (max-width: 425px) {
     .block-wrapper .link-text {
         font-size: 12px;
     }

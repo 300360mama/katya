@@ -39,27 +39,29 @@
 
         <section class="conception-blocks">
             <div class="nav-block">
-                <a href="/model/article/1" class="block-wrapper">
+                <a href="/model/1" class="block-wrapper">
                     <i class="fas fa-globe-americas circle"></i>
-                    <span class="link-text">ФОРМУВАННЯ ЦІЛІСНОЇ КАРТИНИ СВІТУ <br>(предметне, природне , соціальне довкілля)</span>
+                    <span class="link-text">
+                        ФОРМУВАННЯ ЦІЛІСНОЇ КАРТИНИ СВІТУ <br>(предметне, природне , соціальне довкілля)
+                    </span>
                 </a>
-                <a href="/model/article/2" class="block-wrapper">
+                <a href="/model/2" class="block-wrapper">
                     <i class="fab fa-searchengin circle"></i>
                     <span class="link-text">
-                        ДІЯЛЬНІСНИЙ ПІДХІД ТА РЕЗУЛЬТАТООРІЄНТОВАНІСТЬ В РІЗНИХ ВИДАХ ДІЯЛЬНОСТІ
+                        ДІЯЛЬНІСНИЙ ПІДХІД ТА РЕЗУЛЬТАТО<wbr>ОРІЄНТОВАНІСТЬ</wbr> В РІЗНИХ ВИДАХ ДІЯЛЬНОСТІ
                     </span>      
                 </a>
-                <a href="/model/article/3" class="block-wrapper">
+                <a href="/model/3" class="block-wrapper">
                     <i class="fas fa-thumbs-up circle"></i>
                     <span class="link-text">
                         ФОРМУВАННЯ ЖИТТЄВИХ КОМПЕТЕНТНОСТЕЙ
                     </span> 
                 </a>
-                <a href="/model/article/4" class="block-wrapper">
+                <a href="/model/4" class="block-wrapper">
                     <i class="far fa-smile-beam circle"></i>
                     <span class="link-text">КОМФОРТНЕ ПРОЖИВАННЯ ДИТИНОЮ СПЕЦИФІЧНО ДИТЯЧОЇ ДІЯЛЬНОСТІ</span>
                 </a>
-                <a href="/model/article/5" class="block-wrapper">
+                <a href="/model/5" class="block-wrapper">
                     <i class="far fa-handshake circle"></i>
                     <span class="link-text">ПАРТНЕРСЬКА ВЗАЄМОДІЯ</span>   
                 </a>

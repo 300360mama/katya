@@ -32,6 +32,7 @@ article .center {
 .article-list {
     font-size: 18px;
     color: #000b92;
+    align-self: center;
 }
 
 .article-list:nth-of-type(odd) {
