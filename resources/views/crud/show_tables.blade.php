@@ -14,13 +14,10 @@
 <body>
 
     <div class="wrapper" id="list">
-        <h2 class="title">CRU panel</h2>
+        <h2 class="title">Виберіть таблицю для редагування</h2>
 
         @foreach ($tables as $table)
-
-        
-    <a href="/crud/read/{{$table}}" class="table">{{$table}}</a>
-         
+        <a href="/crud/read/{{$table}}" class="table">{{$table}}</a> 
         @endforeach
 
     </div>

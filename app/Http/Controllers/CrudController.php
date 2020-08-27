@@ -9,10 +9,11 @@ class CrudController extends Controller
 {
     private $default_table = "articles";
 
+
+    
     public function index(Request $request)
     {
         $tables = InfoDB::getTables();
-        dump($tables);
 
         return view("crud.show_tables", ["tables"=>$tables]);
         
@@ -147,11 +148,12 @@ class CrudController extends Controller
         ]);
     }
 
-    public function createView(Request $request)
+    public function addNewRow(Request $request)
     {
         $table = $request->table ? $request->table : $this->default_table;
         $fields = InfoDB::getColumnName($table);
         $relationships = InfoDB::getRelationshipsValue($table);
+
 
         return view("crud.create", [
             "table" => $table,

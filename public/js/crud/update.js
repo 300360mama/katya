@@ -16,21 +16,16 @@ window.addEventListener("load", function () {
         let token = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
         let data = new FormData(form);
 
-        fetch(path, {
-            body: data,
-            headers: {
-                'X-CSRF-TOKEN': token,
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            credentials: "same-origin",
-            method: "post"
-        }).then((response) => {
-            response.json().then((res) => {
-                addMessage(message, res.message);
-                show(message_wrapper);
-            });
+        ajax(path, data, token, function(res) {
+            addMessage(message, res.message);
+            show(message_wrapper);
         })
     })
+
+    form.addEventListener("submit", function() {
+        console.log("adsfs");
+        addField(ckeditor, field);
+    });
 });
 
 

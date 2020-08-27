@@ -18,22 +18,12 @@ window.addEventListener("load", function() {
                 hide(message_wrapper);
             });
 
-            fetch(path, {
-                body: data,
-                headers: {
-                    'X-CSRF-TOKEN': token,
-                    'X-Requested-With': 'XMLHttpRequest'
-                },
-                credentials: "same-origin",
-                method: "post"
-            }).then((response) => {
-                response.json().then((res) => {
-                    if (res.result) {
-                        row.parentNode.removeChild(row);
-                    }
-                    addMessage(message, res.message);
-                    show(message_wrapper);
-                });
+            ajax(path, data, token, function(res) {
+                if (res.result) {
+                    row.parentNode.removeChild(row);
+                }
+                addMessage(message, res.message);
+                show(message_wrapper);
             })
         }
     })

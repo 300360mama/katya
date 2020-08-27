@@ -19,35 +19,33 @@
         <a href="{{ url()->previous() }}">Попередня</a>
         <div id="readWrapper" class="update_wrapper">
             <div class="message"></div>
-            <form  enctype="multipart/form-data" class="update_form" id="createForm" action="/crud/create/{{$table}}" method="post">
+            <form enctype="multipart/form-data" class="update_form" id="createForm" action="/crud/create/{{ $table }}"
+                method="post">
                 {{ csrf_field() }}
-                @foreach($fields as $field)
-                @continue($field === "created_at" || $field === "updated_at" || $field === "id")
-                <fieldset class="field_section">
-                    @if(array_key_exists($field, $relationships)
-                    <span class="field_title">{{ $field }}</span>
-                    <select class="row" name="{{ $field }}">
-                        @foreach($relationships[$field] as $values)
-                        @foreach($values as $key=>$value)
-                        @continue($key === 'id')
-                        <option value="{{ $values['id'] }}">{{ $value }}</option>
-                        @endforeach
-                        @endforeach
-                    </select>
-                    @elseif($field === "path_to_image")
-                    <input id="selectImage" type="file" name="image" />
-                    @else
-                    <span class="field_title">{{ $field }}</span>
-                    <textarea id="addRow" name="{{ $field }}" class="row" type="text" rows="5">{{ $field }}</textarea>
-                    @endif
-                </fieldset>
+                @foreach ($fields as $field)
+                    @continue($field === "created_at" || $field === "updated_at" || $field === "id")
+                    <fieldset class="field_section">
+                        @if (array_key_exists($field, $relationships))
+                            <span class="field_title">{{ $field }}</span>
+                            <select class="row" name="{{ $field }}">
+                                @foreach ($relationships[$field] as $values)
+                                    @foreach ($values as $key => $value)
+                                        @continue($key === 'id')
+                                        <option value="{{ $values['id'] }}">{{ $value }}</option>
+                                    @endforeach
+                                @endforeach
+                            </select>
+                        @else
+                            <span class="field_title">{{ $field }}</span>
+                            <textarea id="{{ $field }}" name="{{ $field }}" class="row" type="text"
+                                rows="5">{{ $field }}</textarea>
+                        @endif
+                    </fieldset>
                 @endforeach
                 <input type="submit" name="create" id="create">
             </form>
         </div>
 
-        @include('crud.select_image')
-        @yield('select_image')
         <div class="message_wrapper">
             <div class="message"></div>
             <div class="close">
@@ -59,15 +57,23 @@
     </div>
 
     @push('scripts')
-    <script src="/ckeditor/ckeditor.js"></script>
-    <script src="/js/crud/create.js"></script>
-    <script src="/js/crud/libs.js"></script>
-    <script>  ClassicEditor
-        .create( document.querySelector( '#addRow' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-    </script>
+        <script src="/ckeditor/ckeditor.js"></script>
+        <script src="/js/crud/create.js"></script>
+        <script src="/js/crud/libs.js"></script>
+        <script>
+            let editor;
+            ClassicEditor
+                .create(document.querySelector('#content'))
+                .then(newEditor => {
+                    editor = newEditor;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                
+
+        </script>
     @endpush
 
     @stack('scripts')

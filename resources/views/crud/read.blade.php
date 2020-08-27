@@ -16,7 +16,7 @@
 <div class="wrapper">
     <h2 class="title">CRUD panel</h2>
 
-    <a href="/crud/createView/{{ $table }}" class="new_row">Add new row</a>
+    <a href="/crud/addNewRow/{{ $table }}" class="new_row">Add new row</a>
 
     @if(count($values)>0)
         <div id="readWrapper" class="read_wrapper">
