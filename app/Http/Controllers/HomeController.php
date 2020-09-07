@@ -6,16 +6,23 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(Request $request)
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-
-        $article_number =  $request->number ? $request->number : null;
-        return view("home");
+        $this->middleware('auth');
     }
 
-    public function getArticle(Request $request)
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $article_number =  $request->number ? $request->number : 1;
-        return view("article", ["article_number"=>(int) $article_number]);
+        return view('home');
     }
 }

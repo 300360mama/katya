@@ -25,3 +25,7 @@ Route::get("/crud/read/{table}", "CrudController@read");
 Route::post("/crud/update/{table}", "CrudController@update");
 Route::get("/crud/addNewRow/{table}", "CrudController@addNewRow");
 Route::get("/crud", "CrudController@index");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
