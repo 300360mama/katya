@@ -5,7 +5,6 @@ window.addEventListener("load", function () {
     let closeBtn = document.querySelector(".message_wrapper .close");
     let message_wrapper = document.querySelector(".message_wrapper");
     let message = document.querySelector(".message_wrapper .message");
-    let ckeditor = document.querySelector(".ck.ck-editor");
     closeBtn.addEventListener("click", (e) => {
         hide(message_wrapper);
     });
@@ -13,7 +12,6 @@ window.addEventListener("load", function () {
     create.addEventListener("click", function (e) {
         e.preventDefault();
         const editorData = editor.getData();
-        console.log(editorData);
         let ckeditorContent = form.querySelector("#content");
         ckeditorContent.innerHTML = editorData;
         console.log(ckeditorContent);

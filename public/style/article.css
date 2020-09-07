@@ -27,6 +27,7 @@ article .center {
 
 .article-content p {
     text-indent: 15px;
+    width: 100%;
 }
 
 .article-list {

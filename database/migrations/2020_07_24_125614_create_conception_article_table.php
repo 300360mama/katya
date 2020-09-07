@@ -16,7 +16,7 @@ class CreateConceptionArticleTable extends Migration
         Schema::create('conception_article', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('content');
+            $table->text('content');
             $table->timestamps();
         });
     }

@@ -13,6 +13,10 @@ window.addEventListener("load", function () {
     update.addEventListener("click", function (e) {
 
         e.preventDefault();
+       
+        const editorData = editor.getData();
+        let ckeditorContent = form.querySelector("#content");
+        ckeditorContent.innerHTML = editorData;
         let token = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
         let data = new FormData(form);
 
@@ -23,7 +27,6 @@ window.addEventListener("load", function () {
     })
 
     form.addEventListener("submit", function() {
-        console.log("adsfs");
         addField(ckeditor, field);
     });
 });

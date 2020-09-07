@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,72 +14,84 @@
 
 <body>
 
-<div class="wrapper" id="updateWrapper">
-    <h2 class="title">CRUD panel</h2>
+    <div class="wrapper" id="updateWrapper">
+        <h2 class="title">CRUD panel</h2>
 
-    <a href="{{ url()->previous() }}">Попередня</a>
+        <a href="{{ url()->previous() }}">Попередня</a>
 
-    <div id="readWrapper" class="update_wrapper">
-        <div class="message"></div>
+        <div id="readWrapper" class="update_wrapper">
+            <div class="message"></div>
 
-        <form class="update_form" id="updateForm" action="/crud/update/articles" method="post">
-            {{ csrf_field() }}
-            @foreach($fields as $name => $field)
-                @continue($name === "created_at" || $name === "updated_at")
-                <fieldset class="field_section">
-                    @if(array_key_exists($name, $relationships))
-                        <span class="field_title">{{ $name }}</span>
-                        <select class="row" name="{{ $name }}">
+        <form class="update_form" id="updateForm" action="/crud/update/{{$table}}" method="post">
+               
+                {{ csrf_field() }}
+                @foreach ($fields as $name => $field)
+                    @continue($name === "created_at" || $name === "updated_at")
+                    <fieldset class="field_section">
+                        @if (array_key_exists($name, $relationships))
+                            <span class="field_title">{{ $name }}</span>
+                            <select class="row" name="{{ $name }}">
 
-                            @foreach($relationships[$name] as $values)
+                                @foreach ($relationships[$name] as $values)
 
-                                @foreach($values as $key=>$value)
+                                    @foreach ($values as $key => $value)
 
-                                    @continue($key === 'id')
-                                    @if($fields[$name] === $values['id'])
-                                        <option value="{{ $values['id'] }}" selected>{{ $value }}</option>
-                                    @else
-                                        <option value="{{ $values['id'] }}">{{ $value }}</option>
-                                    @endif
+                                        @continue($key === 'id')
+                                        @if ($fields[$name] === $values['id'])
+                                            <option value="{{ $values['id'] }}" selected>{{ $value }}</option>
+                                        @else
+                                            <option value="{{ $values['id'] }}">{{ $value }}</option>
+                                        @endif
+
+                                    @endforeach
 
                                 @endforeach
 
-                            @endforeach
+                            </select>
+                        @elseif($name === 'id')
+                            <input name="id" type="hidden" id="id" value="{{ $field }}">
+                        @else
+                            <span class="field_title">{{ $name }}</span>
+                            <textarea id="{{$name}}" name="{{ $name }}" class="row" type="text" rows="5">{{ $field }}</textarea>
+                        @endif
 
-                        </select>
-                    @elseif($name === 'id')
-                        <input name="id" type="hidden" id="id" value="{{ $field }}">
-                    @else
-                        <span class="field_title">{{ $name }}</span>
-                        <textarea name="{{ $name }}" class="row" type="text" rows="5">{{ $field }}</textarea>
-                    @endif
+                    </fieldset>
+                @endforeach
 
-                </fieldset>
-            @endforeach
-
-            <input type="submit" name="update" id="update">
-        </form>
-    </div>
-
-
-    <div class="message_wrapper">
-        <div class="message"></div>
-        <div class="close">
-            <span class="line right"></span>
-            <span class="line left"></span>
+                <input type="submit" name="update" id="update">
+            </form>
         </div>
+
+
+        <div class="message_wrapper">
+            <div class="message"></div>
+            <div class="close">
+                <span class="line right"></span>
+                <span class="line left"></span>
+            </div>
+        </div>
+
     </div>
 
-</div>
+    @push('scripts')
+        <script src="/ckeditor/ckeditor.js"></script>
+        <script src="/js/crud/update.js"></script>
+        <script src="/js/crud/libs.js"></script>
+        <script>
+            let editor;
+            ClassicEditor
+                .create(document.querySelector('#content'))
+                .then(newEditor => {
+                    editor = newEditor;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
 
-@push('scripts')
-    <script src="/js/crud/update.js"></script>
-    <script src="/js/crud/libs.js"></script>
-@endpush
+        </script>
+    @endpush
 
-@stack('scripts')
+    @stack('scripts')
 </body>
+
 </html>
-
-
-

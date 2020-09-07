@@ -47,6 +47,7 @@ class CrudController extends Controller
             "result" => $res,
             "message" => $message,
         ];
+        
         $tableModel = InfoDB::getTableModel($table)->find($request->id);
         $message = "Update error";
         $fields = $request->all();
@@ -145,6 +146,7 @@ class CrudController extends Controller
         return view("crud.update", [
             "fields" => $fields,
             "relationships" => $relationships,
+            "table"=> $table
         ]);
     }
 
