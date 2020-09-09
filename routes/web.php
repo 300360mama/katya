@@ -18,6 +18,7 @@ Route::get('/english_model', "EnglishModelController@index")->name("english-mode
 Route::get('/model', "ModelController@index")->name("model");
 Route::get('/model/{number}', "ModelController@getConceptionArticle")->name("model-article");
 
+Auth::routes();
 Route::post("/crud/create/{table}", "CrudController@create");
 Route::post("/crud/delete/{table}", "CrudController@delete");
 Route::post("/crud/show/{table}", "CrudController@show");
@@ -26,6 +27,4 @@ Route::post("/crud/update/{table}", "CrudController@update");
 Route::get("/crud/addNewRow/{table}", "CrudController@addNewRow");
 Route::get("/crud", "CrudController@index");
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

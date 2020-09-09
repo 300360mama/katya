@@ -9,14 +9,17 @@ class CrudController extends Controller
 {
     private $default_table = "articles";
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-    
     public function index(Request $request)
     {
         $tables = InfoDB::getTables();
 
-        return view("crud.show_tables", ["tables"=>$tables]);
-        
+        return view("crud.show_tables", ["tables" => $tables]);
+
     }
 
     public function delete(Request $request)
@@ -47,7 +50,7 @@ class CrudController extends Controller
             "result" => $res,
             "message" => $message,
         ];
-        
+
         $tableModel = InfoDB::getTableModel($table)->find($request->id);
         $message = "Update error";
         $fields = $request->all();
@@ -146,7 +149,7 @@ class CrudController extends Controller
         return view("crud.update", [
             "fields" => $fields,
             "relationships" => $relationships,
-            "table"=> $table
+            "table" => $table,
         ]);
     }
 
@@ -155,7 +158,6 @@ class CrudController extends Controller
         $table = $request->table ? $request->table : $this->default_table;
         $fields = InfoDB::getColumnName($table);
         $relationships = InfoDB::getRelationshipsValue($table);
-
 
         return view("crud.create", [
             "table" => $table,
