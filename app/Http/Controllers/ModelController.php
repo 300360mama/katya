@@ -27,7 +27,7 @@ class ModelController extends Controller
             ]);
         }
 
-        return redirect()->route('login');
+        return redirect()->route('model');
         print_r($article);
 
         

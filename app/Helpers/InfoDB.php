@@ -10,7 +10,7 @@ class InfoDB extends DB
     private static $list_hide_tables = [
         "migrations",
         "password_resets",
-        "users"
+        "users",
     ];
 
     /**
@@ -70,6 +70,9 @@ class InfoDB extends DB
             case "Conception_article":
                 $model = new \App\ConceptionArticle;
                 break;
+            case "Articles":
+                $model = new \App\Article;
+                break;
         };
 
         return $model;
@@ -97,20 +100,21 @@ class InfoDB extends DB
         return $relationships;
     }
 
-    public static function getTables() {
+    public static function getTables()
+    {
 
         $tables = [];
         $listTables = DB::select('SHOW TABLES');
 
-        foreach($listTables as $table) {
-             foreach($table as $name) {
+        foreach ($listTables as $table) {
+            foreach ($table as $name) {
 
-                if(in_array($name, self::$list_hide_tables)) {
+                if (in_array($name, self::$list_hide_tables)) {
                     continue;
                 }
 
                 $tables[] = $name;
-             }
+            }
         }
 
         return $tables;

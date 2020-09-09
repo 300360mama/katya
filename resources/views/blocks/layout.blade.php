@@ -35,6 +35,7 @@
                 <a href="/" class="menu-item">Головна</a>
                 <a href="/model" class="menu-item">Модель розвитку</a>      
                 <a href="/english_model" class="menu-item">Поглиблене англомовлення</a>      
+                <a href="/articles" class="menu-item">Blog</a>      
             </nav>
             <section class="slider">
                 <div class="hide-wrapper"></div>
