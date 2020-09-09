@@ -10,5 +10,4 @@
             </section>
         </article>
     @endforeach
-
 @endsection
