@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use InfoDB;
+use App\Images;
 
 class CrudController extends Controller
 {
@@ -85,6 +86,8 @@ class CrudController extends Controller
     {
 
         if ($request->ajax() || $request->isMethod("post")) {
+            $r = $request->hasFile('upload');
+            dump($r);
             $table = $request->table ? $request->table : $this->default_table;
             $columns = InfoDB::getColumnName($table);
             $tableModel = InfoDB::getTableModel($table);
@@ -98,12 +101,14 @@ class CrudController extends Controller
                     continue;
                 }
 
+                if ($request->file('photo')->isValid()) {
+                    
+                }
                 $tableModel->$name = $request->$name;
             }
 
             $tableModel->created_at = time();
             $tableModel->updated_at = time();
-
             $isSave = $tableModel->save();
 
             if ($isSave) {

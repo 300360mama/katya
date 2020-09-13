@@ -14,7 +14,6 @@ window.addEventListener("load", function () {
         const editorData = editor.getData();
         let ckeditorContent = form.querySelector("#content");
         ckeditorContent.innerHTML = editorData;
-        console.log(ckeditorContent);
 
         let token = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
         let data = new FormData(form);

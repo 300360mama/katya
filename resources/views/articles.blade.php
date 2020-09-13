@@ -10,4 +10,6 @@
             </section>
         </article>
     @endforeach
+
+    {{ $articles->links() }}
 @endsection

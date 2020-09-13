@@ -15,7 +15,7 @@
        <link rel="stylesheet" href="/style/model.css">     
     @endif
 
-    @if (Route::currentRouteName() === "model-article" || Route::currentRouteName() === "english-model")
+    @if (Route::currentRouteName() === "model-article" || Route::currentRouteName() === "english-model" || Route::currentRouteName() === "show-article" || Route::currentRouteName() === "articles")
        <link rel="stylesheet" href="/style/article.css">     
     @endif
        

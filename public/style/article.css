@@ -47,3 +47,15 @@ article .center {
     -webkit-background-clip: text;
     padding-top: 7px;
 }
+
+.content .pagination {
+    width: 100%;
+    display: flex;
+}
+
+.content .pagination li {
+    list-style-type: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
