@@ -48,3 +48,27 @@
 .message_wrapper.visible {
     display: flex;
 }
+
+
+/* Show tables page */
+
+.wrapper .tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper .tables .table {
+    display: block;
+    margin: 5px 15px;
+    font-size: 24px;
+    color: #000000;
+    background: transparent;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, .5);
+    text-decoration: none;
+}
+
+.wrapper .tables .table:active {
+    color: #000000;
+}

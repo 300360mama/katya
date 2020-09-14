@@ -36,6 +36,7 @@
 
 .cell:nth-of-type(even) {
     background: #0303035c;
+    padding: 5px 1px;
 }
 
 .cell .change {

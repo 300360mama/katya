@@ -16,10 +16,11 @@
     <div class="wrapper" id="list">
         <h2 class="title">Виберіть таблицю для редагування</h2>
 
+        <div class="tables">
         @foreach ($tables as $table)
         <a href="/crud/read/{{$table}}" class="table">{{$table}}</a> 
         @endforeach
-
+        </div>
     </div>
 </body>
 
