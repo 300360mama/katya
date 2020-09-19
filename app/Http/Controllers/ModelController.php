@@ -22,6 +22,17 @@ class ModelController extends Controller
         
         if (array_key_exists($article_id, $articles)) {
             $article = $articles[$article_id];
+
+            $pattern = '/&nbsp;/';
+            $replacement = " ";
+            $string = $article["content"];
+
+            while (preg_match($pattern, $string)) {
+                $string = preg_replace($pattern, "$replacement", $string);
+            }
+
+            $article["content"] = $string;
+            
             return view("conception_article", [
                 "article"=> $article
             ]);
