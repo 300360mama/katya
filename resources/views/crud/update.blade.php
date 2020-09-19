@@ -22,7 +22,7 @@
         <div id="readWrapper" class="update_wrapper">
             <div class="message"></div>
 
-        <form class="update_form" id="updateForm" action="/crud/update/{{$table}}" method="post">
+            <form class="update_form" id="updateForm" action="/crud/update/{{$table}}" enctype="multipart/form-data" method="post">
                
                 {{ csrf_field() }}
                 @foreach ($fields as $name => $field)
@@ -80,7 +80,13 @@
         <script>
             let editor;
             ClassicEditor
-                .create(document.querySelector('#content'))
+                .create(document.querySelector('#content'), {
+                    simpleUpload: {
+                        uploadUrl: {
+                            url: '/crud/update/{{$table}}'
+                        }
+                    }
+                })
                 .then(newEditor => {
                     editor = newEditor;
                 })

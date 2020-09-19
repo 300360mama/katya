@@ -25,7 +25,7 @@ Route::post("/crud/create/{table}", "CrudController@create");
 Route::post("/crud/delete/{table}", "CrudController@delete");
 Route::post("/crud/show/{table}", "CrudController@show");
 Route::get("/crud/read/{table}", "CrudController@read");
-Route::post("/crud/update/{table}", "CrudController@update");
+Route::post("/crud/update/{table}", "CrudController@update")->name("crud-update");
 Route::get("/crud/addNewRow/{table}", "CrudController@addNewRow");
 Route::get("/crud", "CrudController@index");
 

@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
 
     update.addEventListener("click", function (e) {
 
-        e.preventDefault();
+       // e.preventDefault();
        
         const editorData = editor.getData();
         let ckeditorContent = form.querySelector("#content");
