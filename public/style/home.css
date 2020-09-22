@@ -100,3 +100,36 @@
 .info .tel {
     text-decoration: none;
 }
+
+.rules {
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.rules .rule {
+    margin: 20px 15px;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 3px 4px 5px #000000;
+    font: 23px Roboto;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    text-align: center;
+    background: #541b21;
+    box-sizing: border-box;
+}
+
+.rules .rule:hover {
+    transform: scale(1.1);
+}
