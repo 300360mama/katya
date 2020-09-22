@@ -57,7 +57,6 @@ class CrudController extends Controller
         $fields = $request->all();
         $res = false;
 
-        dump($_FILES);
 
         if ($request->ajax() || $request->isMethod("post")) {
             foreach ($fields as $name => $field) {

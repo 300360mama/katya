@@ -42,5 +42,11 @@
               <a href="tel:+380660747727" class="tel">066 074 77 27</a>
           </section>
       </section>
+
+      <section class="rules">
+            <a class="rule" href="/home/rules">Правила перебуванння в СЦРД "Googliki"</a>
+            <a class="rule" href="/home/services">Освітні послуги та їх вартість</a>
+            <a class="rule" href="/home/advice">Поради батькам</a>
+      </section>
   </section>
 @endsection

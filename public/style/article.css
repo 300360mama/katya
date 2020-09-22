@@ -30,17 +30,17 @@ article .center {
     width: 100%;
 }
 
-.article-list {
+.article-content ul {
     font-size: 18px;
     color: #000b92;
     align-self: center;
 }
 
-.article-list:nth-of-type(odd) {
+.article-content ul:nth-of-type(odd) {
     color: #a53500;
 }
 
-.article-gradient {
+.article-content p:last-of-type i  {
     background: -webkit-linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
     background: linear-gradient(to right, #f9060c, #f98e1b, #f9f61b, #1bf930, #1bd7f9, #301bf9, #f91be2);
     -webkit-text-fill-color: transparent;
