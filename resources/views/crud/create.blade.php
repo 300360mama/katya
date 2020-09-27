@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/style/crud/update.css">
     <link rel="stylesheet" href="/style/crud/common.css">
-    <link rel="stylesheet" href="/css/fontawesome/all.css">
+    <link rel="stylesheet" href="/style/fontawesome/all.css">
 </head>
 
 <body>

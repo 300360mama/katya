@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use InfoDB;
 use App\Images;
+use App\Http\Controllers\ImageController;
+use Illuminate\Support\Facades\Storage;
 
 class CrudController extends Controller
 {
@@ -43,6 +45,8 @@ class CrudController extends Controller
 
     public function update(Request $request)
     {
+
+        dump($request);
 
         $table = $request->table ? $request->table : $this->default_table;
         $res = false;
@@ -165,5 +169,28 @@ class CrudController extends Controller
             "fields" => $fields,
             "relationships" => $relationships,
         ]);
+    }
+
+    public function uploadImage(Request $request) {
+        if($request->hasFile("upload")) {
+
+            $path = $request->file('upload')->store('blog');
+            Storage::setVisibility("blog", 'public');
+            $vis = Storage::getVisibility($path);
+
+            $p = asset($path);
+        
+            $res = [
+                "uploaded"=> true,
+                "url"=> "/storage/".$path,
+                "path"=>$path,
+                "p"=>$p,
+                "req"=> $request->files,
+                "vis"=> $vis
+            ];
+            return json_encode($res);
+
+        }
+        
     }
 }

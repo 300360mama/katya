@@ -16,9 +16,11 @@
     "jquery": "^3.1.1",
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "vue": "^2.1.10",
+    "ckeditor5-build-laravel-image": "^1.0.1"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^22.0.0",
     "ckeditor5-build-laravel-image": "^1.0.1"
   }
 }

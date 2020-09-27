@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/style/crud/update.css">
     <link rel="stylesheet" href="/style/crud/common.css">
-    <link rel="stylesheet" href="/css/fontawesome/all.css">
+    <link rel="stylesheet" href="/style/fontawesome/all.css">
 </head>
 
 <body>
@@ -74,16 +74,17 @@
     </div>
 
     @push('scripts')
-        <script src="/ckeditor/ckeditor.js"></script>
+        <script src="/js/ckeditor.js"></script>
         <script src="/js/crud/update.js"></script>
         <script src="/js/crud/libs.js"></script>
         <script>
+
             let editor;
             ClassicEditor
                 .create(document.querySelector('#content'), {
                     simpleUpload: {
                         uploadUrl: {
-                            url: '/crud/update/{{$table}}'
+                            url: '/crud/uploadImage'
                         }
                     }
                 })
@@ -93,7 +94,7 @@
                 .catch(error => {
                     console.error(error);
                 });
-
+            
         </script>
     @endpush
 
