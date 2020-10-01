@@ -116,8 +116,8 @@
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    box-shadow: 3px 4px 5px #000000;
-    font: 23px Roboto;
+    box-shadow: 5px 5px 10px inset rgba(0,0,0, 0.3);
+    font: 25px Roboto;
     color: #ffffff;
     text-shadow: 1px 1px #000000;
     display: flex;
@@ -126,7 +126,7 @@
     align-items: center;
     padding: 5px 12px;
     text-align: center;
-    background: #541b21;
+    background: #ff98cd;
     box-sizing: border-box;
     transition: 0.2s 0s transform;
 }

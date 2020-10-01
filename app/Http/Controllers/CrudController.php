@@ -45,9 +45,7 @@ class CrudController extends Controller
 
     public function update(Request $request)
     {
-
-        dump($request);
-
+        
         $table = $request->table ? $request->table : $this->default_table;
         $res = false;
         $message = "Update failed";
@@ -172,22 +170,39 @@ class CrudController extends Controller
     }
 
     public function uploadImage(Request $request) {
+
+      
         if($request->hasFile("upload")) {
 
-            $path = $request->file('upload')->store('blog');
-            Storage::setVisibility("blog", 'public');
-            $vis = Storage::getVisibility($path);
+            $path = $request->file('upload')->store('public/blog');
+            $path = explode( "/", $path);
+            $path= implode("/", array_slice($path, 1));
+            $path = "/storage/".$path; 
+           
 
-            $p = asset($path);
-        
+            $table = $request->table ? $request->table : 'articles';
+            // $articlesModel = InfoDB::getTableModel($table)->find($request->id);
+            // $id = $articlesModel->id;
+
+            // $imageModel = InfoDB::getTableModel("images");
+            // $imageModel->path = $path;
+            // $imageModel->article_id = $id;
+            // $imageModel->save();
+
             $res = [
                 "uploaded"=> true,
-                "url"=> "/storage/".$path,
-                "path"=>$path,
-                "p"=>$p,
-                "req"=> $request->files,
-                "vis"=> $vis
+                "url"=> $path,
+                "id"=>$request->id
             ];
+
+
+            // $imageModel = new Images;
+            // $imageModel->path = "dsfsdfa";
+            // $imageModel->article_id = 1;
+            // $imageModel->save();
+
+    
+           
             return json_encode($res);
 
         }

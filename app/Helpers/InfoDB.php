@@ -73,6 +73,9 @@ class InfoDB extends DB
             case "Articles":
                 $model = new \App\Article;
                 break;
+            case "Images":
+                $model = new \App\Images;
+                break;
         };
 
         return $model;
