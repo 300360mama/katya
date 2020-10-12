@@ -59,6 +59,11 @@ class CrudController extends Controller
         $fields = $request->all();
         $res = false;
 
+        $images = [];
+        $content = $request->content ? $request->content : "";
+        $regex = "~src\s*=\s*\"(.+?)\"~";
+        $images = preg_match_all($regex, $content, $r);
+        dump ($r); 
 
         if ($request->ajax() || $request->isMethod("post")) {
             foreach ($fields as $name => $field) {
@@ -167,45 +172,5 @@ class CrudController extends Controller
             "fields" => $fields,
             "relationships" => $relationships,
         ]);
-    }
-
-    public function uploadImage(Request $request) {
-
-      
-        if($request->hasFile("upload")) {
-
-            $path = $request->file('upload')->store('public/blog');
-            $path = explode( "/", $path);
-            $path= implode("/", array_slice($path, 1));
-            $path = "/storage/".$path; 
-           
-
-            $table = $request->table ? $request->table : 'articles';
-            // $articlesModel = InfoDB::getTableModel($table)->find($request->id);
-            // $id = $articlesModel->id;
-
-            // $imageModel = InfoDB::getTableModel("images");
-            // $imageModel->path = $path;
-            // $imageModel->article_id = $id;
-            // $imageModel->save();
-
-            $res = [
-                "uploaded"=> true,
-                "url"=> $path,
-                "id"=>$request->id
-            ];
-
-
-            // $imageModel = new Images;
-            // $imageModel->path = "dsfsdfa";
-            // $imageModel->article_id = 1;
-            // $imageModel->save();
-
-    
-           
-            return json_encode($res);
-
-        }
-        
     }
 }

@@ -11,6 +11,7 @@ class InfoDB extends DB
         "migrations",
         "password_resets",
         "users",
+        "images"
     ];
 
     /**

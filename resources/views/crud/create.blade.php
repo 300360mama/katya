@@ -56,21 +56,28 @@
 
     </div>
 
-    @push('scripts')
-        <script src="/ckeditor/ckeditor.js"></script>
+    @push('scripts')    
+        <script src="/js/ckeditor.js"></script>
         <script src="/js/crud/create.js"></script>
         <script src="/js/crud/libs.js"></script>
         <script>
+
             let editor;
             ClassicEditor
-                .create(document.querySelector('#content'))
+                .create(document.querySelector('#content'), {
+                    simpleUpload: {
+                        uploadUrl: {
+                            url: '/crud/uploadImage'
+                        }
+                    }
+                })
                 .then(newEditor => {
                     editor = newEditor;
                 })
                 .catch(error => {
                     console.error(error);
                 });
-
+            
         </script>
     @endpush
 

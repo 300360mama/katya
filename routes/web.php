@@ -31,7 +31,7 @@ Route::get("/crud/read/{table}", "CrudController@read");
 Route::post("/crud/update/{table}", "CrudController@update")->name("crud-update");
 Route::get("/crud/addNewRow/{table}", "CrudController@addNewRow");
 Route::get("/crud", "CrudController@index");
-Route::post("/crud/uploadImage", "CrudController@uploadImage");
+Route::post("/crud/uploadImage", "ImageController@uploadImage");
 
 
 
