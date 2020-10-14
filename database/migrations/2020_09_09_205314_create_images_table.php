@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('path');
             $table->integer('articles_id')->nullable();
-            $table->string('table');
+            $table->string('table')->nullable();
             $table->timestamps();
         });
     }

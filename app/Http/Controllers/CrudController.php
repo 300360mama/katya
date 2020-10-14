@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use InfoDB;
-use App\Images;
-use App\Http\Controllers\ImageController;
+use App\Images as Images;
+use App\Http\Controllers\ImageController as ImageController;
 use Illuminate\Support\Facades\Storage;
 
 class CrudController extends Controller
@@ -47,6 +47,8 @@ class CrudController extends Controller
     {
         
         $table = $request->table ? $request->table : $this->default_table;
+        $article_id = $request->id ? $request->id : 1;
+
         $res = false;
         $message = "Update failed";
         $response = [
@@ -57,13 +59,9 @@ class CrudController extends Controller
         $tableModel = InfoDB::getTableModel($table)->find($request->id);
         $message = "Update error";
         $fields = $request->all();
-        $res = false;
 
-        $images = [];
-        $content = $request->content ? $request->content : "";
-        $regex = "~src\s*=\s*\"(.+?)\"~";
-        $images = preg_match_all($regex, $content, $r);
-        dump ($r); 
+        $images = ImageController::parseImages($request);
+        $set = ImageController::setInfo($images, $table, $article_id);
 
         if ($request->ajax() || $request->isMethod("post")) {
             foreach ($fields as $name => $field) {
