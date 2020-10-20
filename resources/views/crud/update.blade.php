@@ -22,8 +22,9 @@
         <div id="readWrapper" class="update_wrapper">
             <div class="message"></div>
 
-            <form class="update_form" id="updateForm" action="/crud/update/{{$table}}" enctype="multipart/form-data" method="post">
-               
+            <form class="update_form" id="updateForm" action="/crud/update/{{ $table }}" enctype="multipart/form-data"
+                method="post">
+
                 {{ csrf_field() }}
                 @foreach ($fields as $name => $field)
                     @continue($name === "created_at" || $name === "updated_at")
@@ -52,7 +53,8 @@
                             <input name="id" type="hidden" id="id" value="{{ $field }}">
                         @else
                             <span class="field_title">{{ $name }}</span>
-                            <textarea id="{{$name}}" name="{{ $name }}" class="row" type="text" rows="5">{{ $field }}</textarea>
+                            <textarea id="{{ $name }}" name="{{ $name }}" class="row" type="text"
+                                rows="5">{{ $field }}</textarea>
                         @endif
 
                     </fieldset>
@@ -66,6 +68,7 @@
         <div class="message_wrapper">
             <div class="message"></div>
             <div class="close">
+
                 <span class="line right"></span>
                 <span class="line left"></span>
             </div>
@@ -78,7 +81,6 @@
         <script src="/js/crud/update.js"></script>
         <script src="/js/crud/libs.js"></script>
         <script>
-
             let editor;
             ClassicEditor
                 .create(document.querySelector('#content'), {
@@ -94,7 +96,7 @@
                 .catch(error => {
                     console.error(error);
                 });
-            
+
         </script>
     @endpush
 

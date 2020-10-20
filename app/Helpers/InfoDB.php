@@ -28,13 +28,11 @@ class InfoDB extends DB
             if (substr($value->Field, -3, 3) === "_id") {
                 return $value->Field;
             }
-
         }, $rows);
         $rows = array_filter($rows, function ($v) {
             if ($v) {
                 return true;
             }
-
         });
 
         return $rows;
@@ -123,5 +121,4 @@ class InfoDB extends DB
 
         return $tables;
     }
-
 }

@@ -22,7 +22,6 @@ class CrudController extends Controller
         $tables = InfoDB::getTables();
 
         return view("crud.show_tables", ["tables" => $tables]);
-
     }
 
     public function delete(Request $request)
@@ -45,7 +44,7 @@ class CrudController extends Controller
 
     public function update(Request $request)
     {
-        
+
         $table = $request->table ? $request->table : $this->default_table;
         $article_id = $request->id ? $request->id : 1;
 
@@ -60,8 +59,8 @@ class CrudController extends Controller
         $message = "Update error";
         $fields = $request->all();
 
-        $images = ImageController::parseImages($request);
-        $set = ImageController::setInfo($images, $table, $article_id);
+        $ImageController = new ImageController();
+        $ImageController->updateImageStatus($request, $table, $article_id);
 
         if ($request->ajax() || $request->isMethod("post")) {
             foreach ($fields as $name => $field) {
@@ -93,12 +92,16 @@ class CrudController extends Controller
 
         if ($request->ajax() || $request->isMethod("post")) {
             $table = $request->table ? $request->table : $this->default_table;
+            $article_id = $request->id ? $request->id : 1;
             $columns = InfoDB::getColumnName($table);
             $tableModel = InfoDB::getTableModel($table);
             $fields = $request->all();
             $res = false;
 
             $message = "Create failed";
+
+            $ImageController = new ImageController();
+            $ImageController->updateImageStatus($request, $table, $article_id);
 
             foreach ($fields as $name => $field) {
                 if (!in_array($name, $columns)) {
