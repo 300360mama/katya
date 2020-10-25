@@ -29,7 +29,10 @@ class CrudController extends Controller
         if ($request->ajax() || $request->isMethod("post")) {
             $id = $request->id_row;
             $table = $request->table ? $request->table : 'articles';
+            $article_id = $request->id ? $request->id : 1;
             $tableModel = InfoDB::getTableModel($table);
+            $ImageController = new ImageController();
+            $ImageController->deleteImages($table, $article_id);
             $row = $tableModel->find($id);
             $res = $row->delete();
 

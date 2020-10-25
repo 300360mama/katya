@@ -47,6 +47,19 @@ class ImageController extends Controller
             $this->deleteFromStore($this->folder . '/' . $image_name);
         }
         $this->deleteFromDB($emptyImages);
+
+    }
+
+    public function deleteImages($table, $article_id) {
+        $this->setEmptyImages($table, $article_id);
+        $emptyImages = $this->getEmptyImages();
+      
+        foreach ($emptyImages as $emptyImage) {
+            $images = explode("/", $emptyImage);
+            $image_name = array_pop($images);
+            $this->deleteFromStore($this->folder . '/' . $image_name);
+        }
+        $this->deleteFromDB($emptyImages);
     }
 
     private function setEmptyImages($table, $article_id) {
