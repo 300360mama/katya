@@ -21,6 +21,8 @@
         <a href="/crud/read/{{$table}}" class="table">{{$table}}</a> 
         @endforeach
         </div>
+
+        
     </div>
 </body>
 

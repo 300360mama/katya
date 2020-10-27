@@ -15,8 +15,11 @@
 <body>
 
     <div class="wrapper" id="createWrapper">
-        <h2 class="title">CRUD panel</h2>
-        <a href="{{ url()->previous() }}">Попередня</a>
+    <h2 class="title">Створення нової статті в таблиці {{ $table }}</h2>
+    <section class="crud_nav_wrapper">
+        <a href="{{ url()->previous() }}" class="crud_nav">Попередня</a>
+        <a href="/crud/addNewRow/{{ $table }}" class="crud_nav">Додати нову статтю</a>
+    </section>
         <div id="readWrapper" class="update_wrapper">
             <div class="message"></div>
             <form enctype="multipart/form-data" class="update_form" id="createForm" action="/crud/create/{{ $table }}"

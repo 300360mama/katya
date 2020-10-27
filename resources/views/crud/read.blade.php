@@ -14,9 +14,13 @@
 <body>
 
 <div class="wrapper">
-    <h2 class="title">CRUD panel</h2>
+    <h2 class="title">Перегляд статей в таблиці {{ $table }}</h2>
 
-    <a href="/crud/addNewRow/{{ $table }}" class="new_row">Add new row</a>
+    <section class="crud_nav_wrapper">
+        <a href="{{ url()->previous() }}" class="crud_nav">Попередня</a>
+        <a href="/crud/addNewRow/{{ $table }}" class="crud_nav">Додати нову статтю</a>
+    </section>
+    
 
     @if(count($values)>0)
         <div id="readWrapper" class="read_wrapper">
