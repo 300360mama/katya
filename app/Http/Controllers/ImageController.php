@@ -9,15 +9,16 @@ use App\Images as Images;
 class ImageController extends Controller
 {
 
-    private $folder = 'public/blog';
+    private $folder = '/public/blog';
 
     public function uploadImage(Request $request)
     {
         if ($request->hasFile("upload")) {
             $path = $request->file('upload')->store($this->folder);
             $path = explode("/", $path);
-            $path = implode("/", array_slice($path, 1));
-            $path = "/storage/" . $path;
+            $name_image = array_pop($path);
+            $path = $this->folder."/".$name_image;
+
 
             if ($path) {
                 $this->saveToDB($path);

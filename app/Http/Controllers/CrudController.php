@@ -151,17 +151,14 @@ class CrudController extends Controller
     {
 
         $table = $request->table ? $request->table : $this->default_table;
-
         $relationships = InfoDB::getRelationshipsValue($table);
-
         $tableModel = InfoDB::getTableModel($table);
-
         $fields = $tableModel->find($request->id_row)->toArray();
 
         return view("crud.update", [
             "fields" => $fields,
             "relationships" => $relationships,
-            "table" => $table,
+            "table" => $table
         ]);
     }
 
