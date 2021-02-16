@@ -18,7 +18,7 @@ Route::get('/english_model', "EnglishModelController@index")->name("english-mode
 Route::get('/model', "ModelController@index")->name("model");
 Route::get('/model/{number}', "ModelController@getConceptionArticle")->name("model-article");
 Route::get('/articles', "ArticleController@index")->name("articles");
-Route::get('/article/{number}', "ArticleController@showArticle")->name("show-article");
+Route::get('/article/{id}', "ArticleController@showArticle")->name("show-article");
 Route::get('/home/rules', "HomeController@rules")->name("home-rules");
 Route::get('/home/services', "HomeController@services")->name("home-services");
 Route::get('/home/advice', "HomeController@advice")->name("home-advice");

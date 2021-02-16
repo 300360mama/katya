@@ -14,4 +14,13 @@ class ArticleController extends Controller
         return view("articles", ["articles" => $articles]);
 
     }
+
+    public function showArticle(Request $request) {
+        $article_id = (int) $request->id ? (int) $request->id : 1; 
+        $article = Article::where("id", $article_id)->first();
+                
+        return view("article", ["article"=>$article]);
+
+    }
+
 }

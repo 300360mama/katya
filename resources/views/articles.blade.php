@@ -8,6 +8,8 @@
             <section class="article-content">
                 {!! preg_replace('/&nbsp;/', ' ', html_entity_decode($article['content'])) !!}
             </section>
+
+        <a class="read-link" href="{{route('show-article', ['id' => $article->id])}}">Читати статтю...</a>
         </article>
     @endforeach
 

@@ -64,3 +64,10 @@ article .center {
     height: 100px;
 }
 
+.content .read-link {
+    align-self: center;
+    text-decoration: none;
+    font: 16px OpenSans;
+    color: #7703ad;
+}
+
